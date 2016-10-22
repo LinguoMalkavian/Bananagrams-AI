@@ -2,8 +2,8 @@
 public class Tester {
 
 	public static void main(String[] args) {
-		
-		testNpuzzle();
+		testHannoi();
+		//testNpuzzle();
 		
 	}
 	
@@ -18,6 +18,17 @@ public class Tester {
 			theProblem.printState(successors[i].getState());
 			Boolean solved= theProblem.testGoal(successors[i]);
 			System.out.println(solved);
+		}
+	}
+	
+	public static void testHannoi(){
+		Problem theProblem =new HannoiProblem("Four by six",4,6);
+		Node[]successors=theProblem.generateSuccessorList(theProblem.getStartNode());
+		System.out.println("Start");
+		theProblem.printState(theProblem.getStartNode().getState());
+		for(int i=0;i<successors.length;i++){
+			System.out.println("Successor "+(i+1));
+			theProblem.printState(successors[i].getState());
 		}
 	}
 

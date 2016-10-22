@@ -5,7 +5,19 @@ public abstract class Problem {
 	public Problem (String name){
 		this.name=name;
 	}
-	
+	//This method copies a state matrix into a new state matrix
+	//the method only works the the array is non empty
+	public int[][] copyState(int[][] original){
+		int width= original.length;
+		int length= original[0].length;
+		int[][] copy= new int[width][length];
+		for(int i=0;i<width;i++){
+			for(int j=0;j<length;j++){
+				copy[i][j]=original[i][j];
+			}
+		}
+		return copy;
+	}
 	
 	public abstract Node[] generateSuccessorList (Node parent);
 	
@@ -19,6 +31,8 @@ public abstract class Problem {
 	
 	public abstract void printState(int[][] state);
 	public abstract Node getStartNode();
+	
+
 	
 	
 }

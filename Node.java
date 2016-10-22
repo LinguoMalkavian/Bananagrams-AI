@@ -15,18 +15,22 @@ public class Node {
 	private Problem problem;
 	private Boolean root;
 	 
-	//Constructor for the node class
-	public Node (Node parentIN,String actionIN,int[][] stateIN,Problem problemIN ){
+	//Constructor for non root nodes
+	public Node (Node parentIN,String actionIN,int[][] stateIN,Problem problemIN,int costIN ){
 		setParent(parentIN);
 		setAction(actionIN);
 		setState(stateIN);
-		problem = problemIN;
+		setRoot(false);
+		setCost(costIN);
+		this.problem = problemIN;
 	}
+	//Constructor for root nodes
 	public Node (int[][] stateIN,Problem problemIN ){
 		setRoot(true);
 		setParent(null);
 		setAction(null);
 		setState(stateIN);
+		setCost(0);
 		this.problem = problemIN;
 	}
 	

@@ -98,13 +98,8 @@ public class NpuzzleProblem extends Problem {
 		gapPosition[1]=Integer.parseInt(gapStr[1]);
 		//initialize the state for the child node
 		int[][] parentState = parent.getState();
-		int[][] newstate = new int [side][side];
-		//Copy the parent state
-		for (int i=0;i<side;i++){
-			for(int j=0;j<side;j++){
-				newstate[i][j] = parentState[i][j];
-			}
-		}
+		
+		int[][] newstate = copyState(parentState);
 		
 		//Choose the action and modify the child state appropriately
 		if (actionKeyword.equals(UP_ACTION)){
@@ -124,7 +119,7 @@ public class NpuzzleProblem extends Problem {
 			newstate[gapPosition[0]-1][gapPosition[1]]=order+1;
 		}
 		//create the new node and return it
-		Node childNode= new Node(parent,action,newstate,this);
+		Node childNode= new Node(parent,action,newstate,this,parent.getCost()+1);
 		return childNode; 
 	}
 
