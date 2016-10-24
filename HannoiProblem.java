@@ -22,17 +22,7 @@ public class HannoiProblem extends Problem {
 	}
 
 
-	public Node[] generateSuccessorList(Node parent) {
-		//Get legal moves
-		String[] actionList= getPossibleActions(parent);
-		
-		//Execute the legal moves and store them
-		Node[] succesors= new Node[actionList.length];
-		for (int i=0;i<actionList.length;i++){
-			succesors[i]=executeAction(parent, actionList[i]);
-		}
-		return succesors;
-	}
+
 
 	public String[] getPossibleActions(Node parent){
 		int[][] state=parent.getState();

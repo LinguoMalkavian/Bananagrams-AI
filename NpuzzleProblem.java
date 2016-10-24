@@ -51,7 +51,8 @@ public class NpuzzleProblem extends Problem {
 		return correct;
 	}
 	
-	public Node[] generateSuccessorList(Node parent){
+	
+	public String[] getPossibleActions(Node parent){
 		int[][] parentState = parent.getState();
 		//Find the position of the gap (the tile with order+1 )
 		int[] gapPosition=new int[2];
@@ -77,17 +78,14 @@ public class NpuzzleProblem extends Problem {
 		if (gapPosition[1]<side-1){
 			actions.add(DOWN_ACTION+":"+gapPosition[0]+","+gapPosition[1]);
 		}
-		
-		//Initialize the response list and generate the child nodes
-		Node[] succesorList=new Node[actions.size()];
-		for(int i=0;i<actions.size();i++){
-			succesorList[i]=executeAction(parent,actions.get(i));
-		}
-		
-		return succesorList;
-		
+		String[] actionArray= new String[actions.size()];
+		actionArray=actions.toArray(actionArray);
+		return actionArray;
 	}
 	
+	//This method takes an action string with the coordinates of the gap and a direction to mive it
+	//The method then performs the soecified action on the node handed as input and returns
+	//the child node resulting from the operation
 	public Node executeAction (Node parent,String action){
 		//Unpack the action command
 		String [] actionElements= action.split(":");
