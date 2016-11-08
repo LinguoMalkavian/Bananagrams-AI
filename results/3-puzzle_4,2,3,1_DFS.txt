@@ -1,0 +1,6 @@
+3-puzzle_4,2,3,1
+Nodes Expanded:12
+Maximum Size of candidate set:2
+Time elapsed:4ms
+Maximum Depth searched:9
+No solution was found

@@ -1,0 +1,12 @@
+maze
+Nodes Expanded:14
+Maximum Size of candidate set:6
+Time elapsed:2ms
+Maximum Depth searched:12
+Depth of solution:13
+Path to solution:
+left up up up right down down right right up up right right 
+00100*
+001010
+000001
+000100

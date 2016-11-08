@@ -1,0 +1,11 @@
+eight puzzle
+Nodes Expanded:29931
+Maximum Size of candidate set:17501
+Time elapsed:63233ms
+Maximum Depth searched:18
+Depth of solution:18
+Path to solution:
+left:1,1 down:0,1 right:0,2 right:1,2 up:2,2 left:2,1 left:1,1 up:0,1 right:0,0 right:1,0 down:2,0 left:2,1 up:1,1 left:1,0 down:0,0 right:0,1 right:1,1 down:2,1 
+| 1  2  3 |
+| 4  5  6 |
+| 7  8  9 |

@@ -1,0 +1,13 @@
+Banana7grams_DSOOGAB
+Nodes Expanded:45171
+Maximum Size of candidate set:154
+Time elapsed:7298994ms
+Depth of solution:7
+Path to solution:
+6>0,0 5>1,0 4>1,0 3>0,3 3>3,1 1>0,3 0>4,0 
+------
+----D-
+---GO-
+---A--
+-SOB--
+------

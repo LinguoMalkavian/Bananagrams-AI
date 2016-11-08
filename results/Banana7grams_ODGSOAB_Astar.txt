@@ -1,0 +1,13 @@
+Banana7grams_ODGSOAB
+Nodes Expanded:8
+Maximum Size of candidate set:163
+Time elapsed:8ms
+Maximum Depth searched:6
+Depth of solution:7
+Path to solution:
+1>0,0 0>2,1 2>2,0 5>1,1 6>2,3 4>3,3 3>3,1 
+-----
+-AGS-
+-DO--
+--BO-
+-----

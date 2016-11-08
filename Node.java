@@ -1,3 +1,7 @@
+//Author:Pablo Gonzalez Martinez
+//Language: Java 
+//Runtime Environment:Java-SE 1.8 (Java-SE 1.8.0_73)
+
 //This class represents a node in the search tree
 //Each instance of a Node includes:
 // parent, The node that generated this one
@@ -8,12 +12,13 @@
 
 public class Node {
 	private int cost;
-	private int estimateh;
+	private double estimateh;
 	private Node parent;
 	private int[][] state;
 	private String action;
 	private Problem problem;
 	private Boolean root;
+	private int depth;
 	 
 	//Constructor for non root nodes
 	public Node (Node parentIN,String actionIN,int[][] stateIN,Problem problemIN,int costIN ){
@@ -23,6 +28,8 @@ public class Node {
 		setRoot(false);
 		setCost(costIN);
 		this.problem = problemIN;
+		setEstimateh(problem.getEstimate(this));
+		setDepth(parent.getDepth()+1);
 	}
 	//Constructor for root nodes
 	public Node (int[][] stateIN,Problem problemIN ){
@@ -31,7 +38,9 @@ public class Node {
 		setAction(null);
 		setState(stateIN);
 		setCost(0);
+		setDepth(0);
 		this.problem = problemIN;
+		setEstimateh(problem.getEstimate(this));
 	}
 	
 	public Node[] generateSuccessorList (){
@@ -48,11 +57,11 @@ public class Node {
 	public void setCost(int cost) {
 		this.cost = cost;
 	}
-	public int getEstimateh() {
+	public double getEstimateh() {
 		return estimateh;
 	}
-	public void setEstimateh(int estimateh) {
-		this.estimateh = estimateh;
+	public void setEstimateh(double d) {
+		this.estimateh = d;
 	}
 	public Node getParent() {
 		return parent;
@@ -78,7 +87,16 @@ public class Node {
 	public void setState(int[][] state) {
 		this.state = state;
 	}
+	public int getDepth() {
+		return depth;
+	}
+	public void setDepth(int depth) {
+		this.depth = depth;
+	}
 	
+	public double getFvalue(){
+		return cost+estimateh;
+	}
 	
 	
 	

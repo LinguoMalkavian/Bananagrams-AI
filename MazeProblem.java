@@ -1,4 +1,11 @@
+import java.io.PrintStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+
+//Author:Pablo Gonzalez Martinez
+//Language: Java 
+//Runtime Environment:Java-SE 1.8 (Java-SE 1.8.0_73)
+//Class to represent a simple Maze problem
 
 public class MazeProblem extends Problem{
 	
@@ -13,7 +20,7 @@ public class MazeProblem extends Problem{
 	public static final String LEFT_ACTION= "left";
 	
 	//THis is the constructor for the maze problem
-	//It takes the widht and height of the maze, an array with the start coordinates
+	//It takes the width and height of the maze, an array with the start coordinates
 	//an array with the target coordinates and an array of pairs of coordinates for the obstacles
 	public MazeProblem(int width, int height, int[]start, int[] finish, int[][] obstacles) {
 		super("maze");
@@ -40,8 +47,11 @@ public class MazeProblem extends Problem{
 	//The method returns a node created from moving in said direction from the position in the parent node
 	//The cost of movement is taken to be always 1
 	public Node executeAction(Node parent, String action) {
+		//get the position in the parent node
 		int[][] parentPosition=parent.getState();
+		//initialize a new state for the child
 		int[][] newPosition=new int[1][2];
+		//see which action command was handed in and represent the child state correspondingly
 		if(action.equals(UP_ACTION)){
 			newPosition[0][0]=parentPosition[0][0];
 			newPosition[0][1]=parentPosition[0][1]-1;
@@ -55,6 +65,7 @@ public class MazeProblem extends Problem{
 			newPosition[0][0]=parentPosition[0][0]-1;
 			newPosition[0][1]=parentPosition[0][1];
 		}
+		//Create the child node, the cost of movement is 1
 		Node child=new Node(parent,action,newPosition,this,parent.getCost()+1);
 		
 		return child;
@@ -103,12 +114,13 @@ public class MazeProblem extends Problem{
 	
 	}
 	
-	//Method that takes a state representation and prints out the maze, 
+	//Method that takes a state representation and prints out the maze in human readable format
 	//0 are empty spaces
 	//*is the adventurer
 	//1 are barriers
 	//& is the goal space
-	public void printState(int[][] state) {
+	//It prints the representation to standard output
+	public void printState(int[][] state, PrintStream outfile) {
 		//Names for easy access to coordinates
 		int X=state[0][0];
 		int Y=state[0][1];
@@ -131,15 +143,41 @@ public class MazeProblem extends Problem{
 				}
 			}
 			//print each line
-			System.out.println(line);
+			outfile.println(line);
 		}
 		
 	}
 
 	//Method to return the starting node
 	public Node getStartNode() {
-		// TODO Auto-generated method stub
 		return startNode;
+	}
+
+	//Method that checks if two nodes have equivalent states
+	//Two states in this problem are equivalent iff the explorer is in the same position
+	public boolean equivalentNodes(Node node1, Node node2) {
+		//get the states form both nodes
+		int[][] state1=node1.getState();
+		int[][] state2=node2.getState();
+		if(state1[0][0]==state2[0][0] && state1[0][1]==state2[0][1] ){
+			return true;
+		}
+		return false;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	//gets a heuristic by using the manhattan distance between the point and the target
+	public double getEstimate(Node node) {
+		int[][] state=node.getState();
+		double distance=Math.abs(targetSpace[0] - state[0][0]) + Math.abs(targetSpace[1] -state[0][1]);
+		return distance;
 	}
 
 }

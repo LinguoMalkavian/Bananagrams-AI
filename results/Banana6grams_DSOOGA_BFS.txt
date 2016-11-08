@@ -1,0 +1,12 @@
+Banana6grams_DSOOGA
+Nodes Expanded:6078
+Maximum Size of candidate set:100
+Time elapsed:81242ms
+Depth of solution:6
+Path to solution:
+5>0,0 4>1,0 3>0,1 1>2,3 3>3,3 0>0,1 
+------
+-DOG--
+---A--
+---SO-
+------

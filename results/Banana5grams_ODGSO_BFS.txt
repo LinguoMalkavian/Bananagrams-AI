@@ -1,0 +1,14 @@
+Banana5grams_ODGSO
+Nodes Expanded:27
+Maximum Size of candidate set:61
+Time elapsed:9ms
+Maximum Depth searched:5
+Depth of solution:5
+Path to solution:
+4>0,0 4>1,0 3>0,2 2>2,0 1>2,4 
+----
+--G-
+--O-
+-SO-
+--D-
+----

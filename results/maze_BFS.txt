@@ -1,0 +1,11 @@
+maze
+Nodes Expanded:31
+Maximum Size of candidate set:8
+Time elapsed:1ms
+Depth of solution:7
+Path to solution:
+right up right up up right right 
+00100*
+001010
+000001
+000100

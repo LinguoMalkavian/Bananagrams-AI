@@ -1,0 +1,10 @@
+3-puzzle_4,1,3,2
+Nodes Expanded:12
+Maximum Size of candidate set:2
+Time elapsed:2ms
+Maximum Depth searched:9
+Depth of solution:2
+Path to solution:
+right:0,0 down:1,0 
+| 1  2 |
+| 3  4 |

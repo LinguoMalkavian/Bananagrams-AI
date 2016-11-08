@@ -1,0 +1,14 @@
+Banana8grams_EBSCOCUN
+Nodes Expanded:103
+Maximum Size of candidate set:1994
+Time elapsed:263ms
+Maximum Depth searched:8
+Depth of solution:8
+Path to solution:
+1>0,0 0>2,1 7>2,0 4>2,0 3>2,0 2>3,2 5>1,2 6>1,3 
+-----
+--C--
+-COS-
+-UN--
+-BE--
+-----

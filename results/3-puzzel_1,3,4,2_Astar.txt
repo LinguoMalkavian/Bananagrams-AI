@@ -1,0 +1,6 @@
+3-puzzel_1,3,4,2
+Nodes Expanded:13
+Maximum Size of candidate set:2
+Time elapsed:2ms
+Maximum Depth searched:6
+No solution was found

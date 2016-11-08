@@ -1,4 +1,10 @@
+import java.io.PrintStream;
+import java.io.PrintWriter;
 
+//Author:Pablo Gonzalez Martinez
+//Language: Java 
+//Runtime Environment:Java-SE 1.8 (Java-SE 1.8.0_73)
+//Abstract class to represent a Problem
 public abstract class Problem {
 	public String name;
 	
@@ -42,9 +48,13 @@ public abstract class Problem {
 	
 	public abstract Boolean testGoal (Node targetNode);
 	
-	public abstract void printState(int[][] state);
-	
+
 	public abstract Node getStartNode();
+	
+	public abstract boolean equivalentNodes(Node node1, Node node2);
+	public abstract void printState(int[][] state, PrintStream out);
+	public abstract double getEstimate(Node node) ;
+	
 	
 
 	

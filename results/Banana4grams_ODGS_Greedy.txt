@@ -1,0 +1,12 @@
+Banana4grams_ODGS
+Nodes Expanded:4
+Maximum Size of candidate set:33
+Time elapsed:6ms
+Maximum Depth searched:3
+Depth of solution:4
+Path to solution:
+1>0,0 0>2,1 2>2,0 3>3,2 
+-----
+--G--
+-DOS-
+-----

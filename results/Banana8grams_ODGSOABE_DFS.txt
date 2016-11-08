@@ -1,0 +1,13 @@
+Banana8grams_ODGSOABE
+Nodes Expanded:74524
+Maximum Size of candidate set:224
+Time elapsed:14479960ms
+Maximum Depth searched:8
+Depth of solution:8
+Path to solution:
+7>0,0 6>1,0 5>0,2 4>2,0 4>1,2 3>0,2 2>2,1 1>4,1 
+------
+--GOD-
+-SOB--
+--AE--
+------

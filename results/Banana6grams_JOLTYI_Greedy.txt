@@ -1,0 +1,14 @@
+Banana6grams_JOLTYI
+Nodes Expanded:104
+Maximum Size of candidate set:124
+Time elapsed:74ms
+Maximum Depth searched:6
+Depth of solution:6
+Path to solution:
+1>0,0 0>0,1 2>2,0 4>3,2 3>2,3 5>2,4 
+-----
+--L--
+-JOY-
+--T--
+--I--
+-----

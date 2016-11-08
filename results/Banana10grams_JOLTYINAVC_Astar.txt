@@ -1,0 +1,16 @@
+Banana10grams_JOLTYINAVC
+Nodes Expanded:5553
+Maximum Size of candidate set:115467
+Time elapsed:7710833ms
+Maximum Depth searched:10
+Depth of solution:10
+Path to solution:
+1>0,0 0>0,1 6>2,2 9>2,0 5>2,0 3>1,1 2>3,1 7>1,0 8>1,0 4>0,2 
+------
+--V---
+-YA---
+--TIL-
+---C--
+--JO--
+---N--
+------

@@ -1,0 +1,6 @@
+Hanoi_4by6
+Nodes Expanded:840
+Maximum Size of candidate set:152
+Time elapsed:296ms
+Maximum Depth searched:64
+No solution was found

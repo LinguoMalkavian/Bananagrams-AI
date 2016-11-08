@@ -1,0 +1,6 @@
+eight puzzle
+Nodes Expanded:135794
+Maximum Size of candidate set:54
+Time elapsed:1120804ms
+Maximum Depth searched:64
+No solution was found
