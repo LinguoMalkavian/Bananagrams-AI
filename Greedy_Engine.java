@@ -4,7 +4,7 @@ public class Greedy_Engine extends SearchEngine {
 
 	public Greedy_Engine(Problem prob) {
 		super(prob);
-		// TODO Auto-generated constructor stub
+		this.setStrategy("Greedy");
 	}
 
 	

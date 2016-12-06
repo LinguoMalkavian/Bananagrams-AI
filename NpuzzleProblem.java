@@ -1,5 +1,4 @@
 import java.io.PrintStream;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class NpuzzleProblem extends Problem {

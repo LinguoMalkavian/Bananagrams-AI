@@ -1,0 +1,12 @@
+Order5Bananagrams30.0
+Nodes Expanded:513
+Maximum Size of candidate set:500
+Time elapsed:69844ms
+Maximum Depth searched:5
+Depth of solution:5
+Path to solution:
+1>0,0 0>1,0 2>2,2 3>3,2 4>4,2 
+------
+-F----
+-ACHY-
+------

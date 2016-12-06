@@ -1,0 +1,13 @@
+Order5Bananagrams24.0
+Nodes Expanded:7
+Maximum Size of candidate set:39
+Time elapsed:58797ms
+Maximum Depth searched:5
+Depth of solution:5
+Path to solution:
+1>0,0 0>0,1 2>1,2 3>1,0 4>0,2 
+-----
+--Y--
+-KEX-
+--S--
+-----

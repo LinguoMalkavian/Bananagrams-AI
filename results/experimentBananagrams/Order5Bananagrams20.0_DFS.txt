@@ -1,0 +1,13 @@
+Order5Bananagrams20.0
+Nodes Expanded:255
+Maximum Size of candidate set:61
+Time elapsed:53452ms
+Maximum Depth searched:5
+Depth of solution:5
+Path to solution:
+4>0,0 4>1,0 3>2,2 2>0,2 0>2,0 
+-----
+--F--
+--E--
+-HEW-
+-----

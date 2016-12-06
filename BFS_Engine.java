@@ -1,10 +1,10 @@
-import java.util.ArrayList;
+
 
 public class BFS_Engine extends SearchEngine {
 
 	public BFS_Engine(Problem prob) {
 		super(prob);
-		// TODO Auto-generated constructor stub
+		this.setStrategy("BFS");
 	}
 
 	@Override
@@ -23,8 +23,6 @@ public class BFS_Engine extends SearchEngine {
 
 	//add new node to the top of the pile
 	public void improve(Node child) {
-		
-		Problem thisProblem= this.getProblem();
 		Node visited=isClosed(child);
 		if(visited==null){
 			this.getOpen().add(child);

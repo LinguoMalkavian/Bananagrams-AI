@@ -1,0 +1,37 @@
+Bananagrams order 5
+51 problems solvedAverage Max Candidate Size:222720.0
+Average Expanded Nodes:24966.94
+Average depth of solution:2.147483647E9
+Average time Elapsed:99676.5
+Average Max Depth:222720.0
+Maximum Nodes Expanded:26326.0
+Maximum Time elapsed:47144.0
+---------------------------------------------Average Max Candidate Size:61.0
+Average Expanded Nodes:688.04
+Average depth of solution:2.147483647E9
+Average time Elapsed:101738.18
+Average Max Depth:61.0
+Maximum Nodes Expanded:4441.0
+Maximum Time elapsed:47148.0
+---------------------------------------------Average Max Candidate Size:109.28
+Average Expanded Nodes:32.040000000000006
+Average depth of solution:2.147483647E9
+Average time Elapsed:101765.38000000002
+Average Max Depth:109.28
+Maximum Nodes Expanded:706.0
+Maximum Time elapsed:47150.0
+---------------------------------------------Average Max Candidate Size:190.5
+Average Expanded Nodes:22.22000000000001
+Average depth of solution:2.147483647E9
+Average time Elapsed:101752.64
+Average Max Depth:190.5
+Maximum Nodes Expanded:513.0
+Maximum Time elapsed:47149.0
+---------------------------------------------Average Max Candidate Size:124.0
+Average Expanded Nodes:22.22000000000001
+Average depth of solution:2.147483647E9
+Average time Elapsed:101778.16
+Average Max Depth:124.0
+Maximum Nodes Expanded:513.0
+Maximum Time elapsed:47151.0
+---------------------------------------------

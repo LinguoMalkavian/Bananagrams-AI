@@ -1,20 +1,20 @@
-import java.io.PrintWriter;
-import java.util.ArrayList;
+
 
 public class DFS_Engine extends SearchEngine {
-	
+
 	private int depthCutoff;
-	
+
 	public DFS_Engine(Problem prob) {
 		//super constructor
 		super(prob);
-		
+		this.setStrategy("DFS");
+
 		//determine the depth cutoff based on the kind of problem
 		if(prob instanceof BananagramsProblem){
 			depthCutoff=((BananagramsProblem) prob).getOrder();
 		}else if (prob instanceof HanoiProblem){
 			int disks=((HanoiProblem) prob).getDisks();
-			depthCutoff=(int) Math.pow(2, disks);
+			depthCutoff=(int) (Math.pow(2, disks)+1)*10;
 		}else if (prob instanceof MazeProblem){
 			int width= ((MazeProblem)prob).getWidth();
 			int height= ((MazeProblem)prob).getHeight();
@@ -27,7 +27,7 @@ public class DFS_Engine extends SearchEngine {
 			//arbitrary
 			depthCutoff=100;
 		}
-		
+
 	}
 
 	//Takes the next node to expand from the top of the pile
@@ -41,13 +41,15 @@ public class DFS_Engine extends SearchEngine {
 		this.getClosed().add(newnode);
 	}
 
-	//Check if new nodes had already been visited and insert them at the top of the pile of they had not
+	//Check if new node had already been visited and insert them at the top of the pile of they had not
 	public void improve(Node child) {
 		Node visited=this.isClosed(child);
-		if(visited==null && child.getDepth()<=depthCutoff){
-			this.getOpen().add(0,child);
+		if (child.getParent().getDepth()<=depthCutoff){
+			if(visited==null){
+				this.getOpen().add(0,child);
+			}
 		}
-		
+
 	}
 
 }

@@ -1,0 +1,152 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[left=3.00cm, right=3.00cm, top=3.00cm, bottom=3.00cm]{geometry}
+\author{Pablo Gonzalez}
+\title{Final project document for the Artificial Intelligence class}
+\begin{document}
+	\maketitle
+	
+	\section{Contents}
+	
+	This submission contains:
+	\begin{itemize}
+	
+	\item *.java and *.bin: source and compiled files for all the classes used in the project. 
+	
+	Among them are:
+	\begin{itemize} 
+	\item An abstract class for problems (Problem) with its corresponding implementations for each problem 
+	\begin{itemize}
+	\item BananagramsProblem
+	\item NPuzzleProblem
+	\item MazeProblem
+	\item HanoiProblem
+	\end{itemize}
+	\item An abstract class for search engines (SearchEngine) along with classes that extend it for each strategy
+	\begin{itemize}
+	\item BFS\_Engine
+	\item DFS\_Engine
+	\item Greedy\_Engine
+	\item Astar\_Engine
+	\item SMAstar\_Engine
+	\end{itemize}
+	\item The Node class to be used by all problems.
+	
+	
+	\item Three runnable classes that perform different uses of the program
+	\begin{itemize}
+	\item Tester: a small program to test node generation and goal testing (see instructions below)
+	\item SearchTester: Runs a specified kind of search on a preset version of the problem (see instructions below)
+	\item RunExperiment\_Bananagrams: runs a larger experiment with several problems (specified in input files) 
+	\end{itemize}
+	\end{itemize}
+	\item \lstinline!data/dictionary.txt!: a text file with the scrabble dictionary of all valid words to be used by the Bananagrams problem
+	
+	\item \lstinline!data/n-gramfreq.txt!: a series of text files with the collected frequencies of n-grams (for n between 2 and 15) as they appear in dictionary.txt
+	\item \lstinline!data/ngramcounter.py!: the python code to generate the n-gram files
+	\item\lstinline!data/problem/n-bananagramProblems!:files with the tilesets for randomly generated order n bananagrams problems highly probably to be solvable  
+	\item \lstinline!data/bananagramgen.py!: the python code used to generate the problems
+	
+	\item \lstinline!Readme.pdf!: this file
+	
+	\end{itemize}
+	
+	\section{Running instructions}
+	
+	\subsection{Tester}
+	To run the tester for node generation navigate to the containing directory within the terminal and run:
+	
+	\begin{lstlisting}
+	$java Tester <problemnanme>
+	
+	\end{lstlisting}
+	The \lstinline!<problemname>! variable can take four values, it chooses which problem to test, the allowed values are:
+	\begin{lstlisting}
+	Bananagrams
+	Hanoi
+	NPuzzle
+	Maze
+	\end{lstlisting}
+	
+	The response is printed to console standard output so it will appear in the terminal.
+	If modifications are made the code will have to be recompiled for them to take effect, run:
+	\begin{lstlisting}
+	$javac Tester
+	\end{lstlisting}
+	The Rester program makes three tests and post the results:
+	\begin{itemize}
+	\item It first generates and prints all successors of the root node
+	\item It then generates nodes at depths 2 through 4 (by taking always the first available action) and prints then
+	\item It then takes a solution to the problem prints it and applies the goal test to it.
+	\end{itemize}
+	All tests worked as desired.
+	
+	\subsection{SearchTester}	
+	To run the Search tester to do search on an instance of one of the problems navigate to the containing directory and type:
+	
+	\begin{lstlisting}
+	$java SearchTester <problemnanme> <strategy> <extra args>
+	\end{lstlisting}
+	The \lstinline!<problemname>! argument can have the values:
+	\begin{lstlisting}
+	Bananagrams 
+	Hanoi
+	NPuzzle
+	Maze
+	\end{lstlisting}
+	The \lstinline!<strategy>! argument can have the values:
+	\begin{itemize}
+	\item \lstinline!BFS!  	: Performs Breadth firs search
+	\item\lstinline!DFS!	: Performs Depth fist search with depth cutoff
+	\item \lstinline!Greedy!	: Performs Greedy Search
+	\item \lstinline!Astar!	: Performs A* search
+	\item \lstinline!SMA! 	: Performs simplified memory bound A* search
+	\end{itemize}
+	The extra arguments are only needed for 3 of the problems
+	If \lstinline!<problemname>! is \lstinline!Bananagrams! then one extra argument with the order (an
+	integer between 2 and 15) must be provided (please note that uninformed 
+	search with orders bigger than 6 and heuristic search with orders larger
+	than 10 will take a long time )
+	
+	If \lstinline!<problemname>! is Hanoi then the number of pegs followed by the number of
+	disks should be provided.
+	
+	If \lstinline!<problemname>! is Npuzzle then an extra argument: 3, 8 or 15
+	must be provided for the size of the puzzle.
+	
+	Some examples to run searches are
+	\begin{lstlisting}
+	$java SearchTester Bananagrams Astar 8
+	
+	$java SearchTester Hanoi Greedy 3 5
+	
+	$java SearchTester NPuzzle SMA 8
+	\end{lstlisting}
+	
+	\subsection{RunExperiment\_Bananagrams}
+	The third way to run an experiment is to use the RunExperiment\_Bananagrams, this
+	will bulk run the problems stored in \lstinline!/problems! for a given order, it is run
+	with the command:
+	
+	\begin{lstlisting}
+	$java RunExperiment_Bananagrams <order>
+	
+	\end{lstlisting}
+	Where \lstinline!<order>! is the size of the bananagrams you want to run
+	
+
+	
+	
+	The /results folder contains the ourput for runs of all problems from the search
+	tester and from running the bananagrams bulk experiment for orders 4 and 5. 
+	
+
+	
+	
+\end{document}

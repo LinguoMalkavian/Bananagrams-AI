@@ -66,7 +66,8 @@ public class Tester {
 
 	public static void testBananagrams(){
 		//Initialize a 9 tile bananagrams problem
-		Problem theProblem=new BananagramsProblem("Banana9grams","NAGODSEEP");
+		String [] letterBag={"N","A","G","O","D","S","E","E","P"};
+		Problem theProblem=new BananagramsProblem("Banana9grams",letterBag);
 		testNodeGeneration(theProblem);
 		
 		//build a solved state for this problem

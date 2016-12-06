@@ -1,0 +1,12 @@
+Order5Bananagrams32.0
+Nodes Expanded:21
+Maximum Size of candidate set:104
+Time elapsed:51038ms
+Maximum Depth searched:5
+Depth of solution:5
+Path to solution:
+1>0,0 0>2,1 4>1,0 4>0,2 2>0,2 
+------
+---L--
+-SLAB-
+------

@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Hashtable;
@@ -34,14 +33,13 @@ public class BananagramsProblem extends Problem {
 	//Constructor for the Bananagrams Problem
 	//Takes the name of the problem and a string with the characters for the tiles
 	//Creates all the necessary initial values and loads the dictionary
-	public BananagramsProblem (String name,String characters ) {
+	public BananagramsProblem (String name,String[] characters ) {
 		super(name);
-		order=characters.length();
-		tiles=new char[characters.length()];
+		order=characters.length;
+		tiles=new char[characters.length];
 		//Initialize the character list with the given string
-		characters=characters.toUpperCase();
-		for (int i=0 ;i <characters.length(); i++){
-			tiles[i]=characters.charAt(i);
+		for (int i=0 ;i <characters.length; i++){
+			tiles[i]=characters[i].charAt(0);
 		}
 		//create the starting state the representation has the maximum integer for both coordinates if a tile is unplaced
 		//if the tile is placed it has it's x and y coordinates respectively  

@@ -1,5 +1,4 @@
 import java.io.PrintStream;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
 //Author:Pablo Gonzalez Martinez
@@ -119,8 +118,8 @@ public class HanoiProblem extends Problem {
 		int targetTop=getTopDisk(newState[target]);
 		//Move the disk
 		if(targetTop!=-1){
+			//peg is not empty, new disk goes on top of the top disk
 			newState[target][targetTop-1]=newState[origin][originTop];
-			newState[origin][originTop]=0;
 		}else{
 			newState[target][disks-1]=newState[origin][originTop];
 		}
@@ -163,22 +162,19 @@ public class HanoiProblem extends Problem {
 	public boolean equivalentNodes(Node node1, Node node2) {
 		int[][] state1=node1.getState();
 		int[][] state2=node2.getState();
-
-			boolean equivalent=true;
-			for (int i=0;i<pegs && equivalent ;i++){
-				for(int j=0;j<disks && equivalent;j++){
-					if(state1[i][j]!=state2[i][j]){
-						equivalent=false;
-					}
+		for (int peg=0;peg<pegs;peg++){
+			for (int pos=0;pos<disks;pos++){
+				if (state1[peg][pos]!=state2[peg][pos]){
+					return false;
 				}
 			}
-			if(equivalent){
-				return true;
-			}
-		
-		
+		}
+		return true;
+			
+		//return false;
 //		for (int[]permutation : permutationsList){
 //			boolean equivalent=true;
+//			//check the pegs in state1 against the permuted pegs in state 2
 //			for (int i=0;i<pegs-1 && equivalent ;i++){
 //				for(int j=0;j<disks && equivalent;j++){
 //					if(state1[i][j]!=state2[permutation[i]][j]){
@@ -190,7 +186,7 @@ public class HanoiProblem extends Problem {
 //				return true;
 //			}
 //		}
-		return false;
+//		return false;
 	}
 	
 	//A recursive method to generate all possible permutations of the non goal pegs
@@ -201,7 +197,7 @@ public class HanoiProblem extends Problem {
 			//iterate over all values in the element list
 			for (int i=0;i<items.size() ; i++){
 				//copy the list and remove the value
-				ArrayList<Integer>listWithout=(ArrayList<Integer>) items.clone();
+				ArrayList<Integer>listWithout= (ArrayList<Integer>) items.clone();
 				listWithout.remove(i);
 				//generate all permutations of the list without that element
 				ArrayList<int[]>truncatedPermutations=generatePermutations(listWithout);
@@ -265,10 +261,23 @@ public class HanoiProblem extends Problem {
 
 
 
-	@Override
+	//Calculates the heuristic that estimates distance to the end state
+	//The heuristic is a measure of how buried disks that are not in the goal post are
+	//For each disk outside the target peg the value of the disk is how many disks it has on top of it, reflecting that moving it into the goal peg will take at least moving all of the disks on top of it
+	//The distance is estimated by adding the value for each disk
 	public double getEstimate(Node node) {
-		// TODO Auto-generated method stub
-		return 0;
+		int[][] state=node.getState();
+		int score=0;
+		for (int peg=0;peg<pegs-1;peg++){
+			int above=0;
+			for (int position=0;position<disks;position++){
+				if (state[peg][position]!=0){
+					score+=state[peg][position]+above;
+					above+=1;
+				}
+			}
+		}
+		return score;
 	}
 	
 }

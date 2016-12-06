@@ -1,0 +1,12 @@
+Order5Bananagrams6.0
+Nodes Expanded:8
+Maximum Size of candidate set:54
+Time elapsed:75680ms
+Maximum Depth searched:5
+Depth of solution:5
+Path to solution:
+1>0,0 2>2,1 0>0,1 4>2,0 3>4,2 
+------
+--F---
+-QATS-
+------

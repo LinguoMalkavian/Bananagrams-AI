@@ -1,0 +1,12 @@
+Order5Bananagrams13.0
+Nodes Expanded:24854
+Maximum Size of candidate set:222720
+Time elapsed:49156ms
+Maximum Depth searched:5
+Depth of solution:5
+Path to solution:
+0>0,0 1>2,1 2>0,1 4>4,1 3>3,2 
+------
+-PRAO-
+---S--
+------

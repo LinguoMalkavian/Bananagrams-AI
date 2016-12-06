@@ -1,7 +1,7 @@
 B,A,T,T,L,E,M,E,N,T,S,O
 S,W,I,V,E,L,L,I,N,G,K,O
 B,I,N,D,I,I,A,M,S,C,N,E
-B,O,O,K,L,E,T,S,A,T,E,R,I,T,Y
+B,O,O,K,L,E,T,S,A,T,E,R
 C,O,N,T,I,N,E,N,C,E,O,W
 S,E,M,I,D,W,A,R,V,E,S,T
 C,O,R,N,I,N,E,S,S,A,M,E

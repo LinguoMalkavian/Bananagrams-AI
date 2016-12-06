@@ -1,0 +1,12 @@
+Order4Bananagrams21.0
+Nodes Expanded:699
+Maximum Size of candidate set:4608
+Time elapsed:0ms
+Maximum Depth searched:4
+Depth of solution:4
+Path to solution:
+0>0,0 1>2,1 3>1,0 2>3,2 
+-----
+-P---
+-IVY-
+-----

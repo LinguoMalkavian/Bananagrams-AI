@@ -1,10 +1,13 @@
+
 import java.util.ArrayList;
+  
+
 
 public class Astar_Engine extends SearchEngine {
 
 	public Astar_Engine(Problem prob) {
 		super(prob);
-		// TODO Auto-generated constructor stub
+		this.setStrategy("Astar");
 	}
 
 	
@@ -15,7 +18,7 @@ public class Astar_Engine extends SearchEngine {
 		return nodeToExpand;
 	}
 
-	@Override
+	// Get the first 
 	public void insert(Node newnode) {
 		this.getClosed().add(newnode);
 

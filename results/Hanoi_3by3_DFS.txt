@@ -1,0 +1,13 @@
+Hanoi_3by3
+Nodes Expanded:14
+Maximum Size of candidate set:9
+Time elapsed:2ms
+Maximum Depth searched:13
+Depth of solution:13
+Path to solution:
+0>2 2>1 0>2 1>2 2>0 2>1 0>2 2>1 0>2 1>2 2>0 1>2 0>2 
+ |  |  | 
+ |  |  1 
+ |  |  2 
+ |  |  3 
+ _  _  _ 
