@@ -1,0 +1,13 @@
+Order8Bananagrams1
+Nodes Expanded:30
+Maximum Size of candidate set:249
+Time elapsed:6ms
+Maximum Depth searched:8
+Depth of solution:8
+Path to solution:
+1>0,0 0>2,1 5>1,2 3>0,2 6>4,1 7>4,2 2>4,0 4>5,1 
+-------
+----QI-
+--ERA--
+-UN-T--
+-------

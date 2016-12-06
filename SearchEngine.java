@@ -30,8 +30,8 @@ public abstract class SearchEngine {
 		this.getOpen().add(prob.getStartNode());
 		this.maxCandidateSize=0;
 		this.expandedNodes=0;
-		this.depthOfSolution=Integer.MAX_VALUE;
-		this.startTime=new Date();
+		this.depthOfSolution=0;
+		this.startTime=null;
 		
 		
 	}
@@ -68,7 +68,7 @@ public abstract class SearchEngine {
 				System.out.println(""+expandedNodes+" nodes expanded.");
 			}
 		}
-		endChrono();
+		this.endChrono();
 		return null;
 	}
 	//Takes the finished search and prints everything stored to a file
@@ -106,7 +106,7 @@ public abstract class SearchEngine {
 			path= thisNode.getAction()+" " + path;
 			thisNode=thisNode.getParent();
 		}
-		
+		depthOfSolution=finalNode.getDepth();
 		String line="Depth of solution:"+ finalNode.getDepth();
 		outfile.println(line);
 		line="Path to solution:";

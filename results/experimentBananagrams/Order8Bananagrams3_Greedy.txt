@@ -1,0 +1,12 @@
+Order8Bananagrams3
+Nodes Expanded:13
+Maximum Size of candidate set:214
+Time elapsed:0ms
+Maximum Depth searched:8
+Depth of solution:8
+Path to solution:
+1>0,0 0>2,1 2>1,2 3>0,1 4>0,1 7>1,2 5>0,1 6>1,2 
+-------
+-SAGAS-
+-OR-N--
+-------

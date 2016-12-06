@@ -1,0 +1,6 @@
+Order4Bananagrams30
+Nodes Expanded:4092
+Maximum Size of candidate set:3382
+Time elapsed:922ms
+Maximum Depth searched:4
+No solution was found

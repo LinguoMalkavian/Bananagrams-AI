@@ -1,0 +1,13 @@
+Order4Bananagrams2
+Nodes Expanded:668
+Maximum Size of candidate set:4608
+Time elapsed:0ms
+Maximum Depth searched:4
+Depth of solution:4
+Path to solution:
+0>0,0 1>2,1 2>2,2 3>2,3 
+----
+-KA-
+--L-
+--T-
+----

@@ -1,0 +1,12 @@
+Order4Bananagrams23
+Nodes Expanded:683
+Maximum Size of candidate set:4608
+Time elapsed:1ms
+Maximum Depth searched:4
+Depth of solution:4
+Path to solution:
+0>0,0 1>2,1 3>1,2 2>3,1 
+-----
+-KEG-
+-I---
+-----

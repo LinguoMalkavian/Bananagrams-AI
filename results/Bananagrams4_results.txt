@@ -1,46 +1,47 @@
 Bananagrams order 4
-50 problems solvedBFSfor order4 Bananagrams
+50 problems solved
+BFSfor order4 Bananagrams
 Average Max Candidate Size:4608.0
 Average Expanded Nodes:661.3799999999999
-Average depth of solution:2.147483647E9
-Average time Elapsed:0.039999999999999994
+Average depth of solution:4.0
+Average time Elapsed:0.1
 Average Max Depth:4608.0
 Maximum Nodes Expanded:755.0
-Maximum Time elapsed:0.0
+Maximum Time elapsed:0
 ---------------------------------------------
 DFSfor order4 Bananagrams
 Average Max Candidate Size:33.0
 Average Expanded Nodes:125.56
-Average depth of solution:2.147483647E9
-Average time Elapsed:16.640000000000004
+Average depth of solution:3.68
+Average time Elapsed:20.52
 Average Max Depth:33.0
 Maximum Nodes Expanded:341.0
-Maximum Time elapsed:279.0
+Maximum Time elapsed:339
 ---------------------------------------------
 Greedyfor order4 Bananagrams
 Average Max Candidate Size:84.16
 Average Expanded Nodes:104.38
-Average depth of solution:2.147483647E9
-Average time Elapsed:29.639999999999997
+Average depth of solution:3.68
+Average time Elapsed:40.52000000000002
 Average Max Depth:84.16
 Maximum Nodes Expanded:1875.0
-Maximum Time elapsed:649.0
+Maximum Time elapsed:970
 ---------------------------------------------
 Astarfor order4 Bananagrams
 Average Max Candidate Size:177.68
 Average Expanded Nodes:170.94
-Average depth of solution:2.147483647E9
-Average time Elapsed:33.30000000000001
+Average depth of solution:3.76
+Average time Elapsed:48.3
 Average Max Depth:177.68
 Maximum Nodes Expanded:4092.0
-Maximum Time elapsed:647.0
+Maximum Time elapsed:922
 ---------------------------------------------
 SMAstarfor order4 Bananagrams
 Average Max Candidate Size:76.44
 Average Expanded Nodes:62.48000000000002
-Average depth of solution:2.147483647E9
-Average time Elapsed:18.56
+Average depth of solution:3.76
+Average time Elapsed:25.71999999999999
 Average Max Depth:76.44
 Maximum Nodes Expanded:1014.0
-Maximum Time elapsed:341.0
+Maximum Time elapsed:478
 ---------------------------------------------

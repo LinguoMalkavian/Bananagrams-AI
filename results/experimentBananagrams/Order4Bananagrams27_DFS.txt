@@ -1,0 +1,12 @@
+Order4Bananagrams27
+Nodes Expanded:96
+Maximum Size of candidate set:33
+Time elapsed:12ms
+Maximum Depth searched:4
+Depth of solution:4
+Path to solution:
+3>0,0 1>1,0 3>0,1 0>3,1 
+-----
+-FIR-
+--F--
+-----
